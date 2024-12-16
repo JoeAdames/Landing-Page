@@ -6,7 +6,76 @@
     <title>Tarmac</title>
 </head>
 <body>
-
+<section class="hero">
+    <div class="header-1">
+        <div class="header-logo">
+            <h3 class="header-logo-text">Header Logo</h1>
+        </div>
+        <nav>
+            <ul>
+                <li ><a class="header-link-text" href="#">link 1</a></li>
+                <li ><a class="header-link-text" href="#">link 2</a></li>
+                <li ><a class="header-link-text" href="#">link 3</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-2">
+        <div class="text-section">
+            <h1 class="hero-main-text">This Website is Awesomes</h1>
+            <p class="hero-secondary-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus veniam aut labore laboriosam velit neque aliquid hic reiciendis eum libero tempora consequuntur doloribus facere rerum omnis ipsam, molestias incidunt explicabo</p>
+            <button class="btn-color"><a href="#" class="hero-link-text">Sign up</a></button>
+        </div>
+        <div class="image-section">
+            <picture>
+                <source media="(min-width: 600)" srcset="https://placehold.co/200x100">
+                <img src="https://placehold.co/600x300" alt="placeholder">
+            </picture>
+        </div>
+    </div>
+</section>
+<section class="information">
+    <div class="title">
+        <h1 class="info-header-text">Some Random Information.</h1>
+    </div>
+    <div class="boxs">
+        <div class="item">
+            <div class="box">
+                <picture>
+                    <source media="(min-width: 600)" srcset="https://placehold.co/100x100">
+                    <img src="https://placehold.co/200x200" alt="">
+                </picture>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="item">
+            <div class="box">
+                <picture>
+                    <source media="(min-width: 600)" srcset="https://placehold.co/100x100">
+                    <img src="https://placehold.co/200x200" alt="">
+                </picture>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="item">
+            <div class="box">
+                <picture>
+                    <source media="(min-width: 600)" srcset="https://placehold.co/100x100">
+                    <img src="https://placehold.co/200x200" alt="">
+                </picture>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="item">
+            <div class="box">
+                <picture>
+                    <source media="(min-width: 600)" srcset="https://placehold.co/100x100">
+                    <img src="https://placehold.co/200x200" alt="">
+                </picture>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+</section>
 </body>
 </html>
 <style>
@@ -14,20 +83,101 @@
     * {
         font-family: Roboto;
     }
+    body {
+        margin: 0;
+    }
     .hero {
         background-color: #1f2937;
-        .hero-main-text {
-            font-size: 48px;
-            color: #f9faf8;
-            font-weight: 900;
+
+        /* display flex for the items below */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        /* .header-1 */
+        .header-1 {
+                display: flex;
+                width: 75%;
+
+            nav {
+                flex-grow: 2;
+
+                ul {
+                    display: flex;
+                    justify-content: end;
+                    list-style: none;
+                    gap: 2rem;
+                }
+            }
+            .header-logo {
+                text-align: center;
+            }
+            .header-logo-text {
+                font-size: 24px;
+                color: #f9faf8;
+            }
+            .header-link-text {
+                font-size: 18px;
+                color: #e5e7eb;
+                text-decoration: none;
+            }
         }
-        .hero-secondary-text {
-            font-size: 18px;
-            color: e5e7eb;
+        /* .header-2 */
+        .header-2 {
+            width: 75%;
+            display: flex;
+            flex: 1;
+            margin-top: 5rem;
+            margin-bottom: 8rem;
+
+            .hero-link-text {
+                font-size: 18px;
+                color: #e5e7eb;
+                text-decoration: none;
+            }
+            .hero-main-text {
+                font-size: 48px;
+                color: #f9faf8;
+                font-weight: 900;
+            }
+            .hero-secondary-text {
+                font-size: 18px;
+                color: #e5e7eb;
+                max-width: 75%;
+            }
         }
-        .header-logo-text {
-            font-size: 24px;
-            color: f9faf8;
+    }
+    .information {
+
+        .title {
+            text-align: center;
+            .info-header-text {
+                font-size: 36px;
+                color: #1f2937;
+                font-weight: 900;
+            }
+        }
+        .boxs {
+            margin-top: 5rem;
+            margin-bottom: 8rem;
+            display: flex;
+            justify-content: center;
+            flex: auto;
+            gap: 5rem;
+            .item {
+                max-width: 210px;
+                display: flex;
+                flex-direction: column;
+                .box {
+                    border: 3px solid #3882f6;
+                    border-radius: 8px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
         }
     }
     .call-to-action {
@@ -35,14 +185,12 @@
     }
     .btn-color {
         background-color: #3882f6;
-    }
-    .info-header-text {
-        font-size: 36px;
-        color: #1f2937;
-        font-weight: 900;
+        padding: .5rem 3rem;
+        border: none;
+        border-radius: 8px;
     }
     .quotes {
-        background-color: e5e7eb;
+        background-color: #e5e7eb;
 
         .qoute-text {
             font-size: 36px;
