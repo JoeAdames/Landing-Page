@@ -76,6 +76,12 @@
         </div>
     </div>
 </section>
+<section class="quote">
+    <p class="quote-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, accusamus. Accusantium ea minima modi mollitia reiciendis dolorum in veritatis voluptatum!</p>
+    <div class="who">
+        <p class="quote-from"> - Thor, God of Thunder</p>
+    </div>
+</section>
 </body>
 </html>
 <style>
@@ -189,14 +195,25 @@
         border: none;
         border-radius: 8px;
     }
-    .quotes {
+    .quote {
         background-color: #e5e7eb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5rem;
 
-        .qoute-text {
+        .quote-text {
+            margin-top: 5rem;
             font-size: 36px;
             color: #1f2937;
-            font-weight: light;
+            font-weight: lighter;
             font-style: italic;
+            max-width: 44%;
+        }
+        .who {
+            width: 33%;
+            display: flex;
+            justify-content: flex-end;
         }
     }
 </style>
