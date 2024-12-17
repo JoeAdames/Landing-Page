@@ -82,6 +82,23 @@
         <p class="quote-from"> - Thor, God of Thunder</p>
     </div>
 </section>
+<section class="CTA">
+<div class="call-to-action">
+   <div class="content">
+    <div class="text-area">
+        <div class="title">
+            <h3>Call to Action! It's Time!</h3>
+        </div>
+        <div class="statement">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dolores.
+        </div>
+    </div>
+    <div class="click-area">
+        <button class="btn-color cta-signup"><a href="#"> Sign Up</a></button>
+    </div>
+   </div>
+</div>
+</section>
 </body>
 </html>
 <style>
@@ -95,13 +112,11 @@
     .hero {
         background-color: #1f2937;
 
-        /* display flex for the items below */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        /* .header-1 */
         .header-1 {
                 display: flex;
                 width: 75%;
@@ -129,7 +144,6 @@
                 text-decoration: none;
             }
         }
-        /* .header-2 */
         .header-2 {
             width: 75%;
             display: flex;
@@ -186,9 +200,6 @@
             }
         }
     }
-    .call-to-action {
-        background-color: #3882f6;
-    }
     .btn-color {
         background-color: #3882f6;
         padding: .5rem 3rem;
@@ -215,5 +226,52 @@
             display: flex;
             justify-content: flex-end;
         }
+    }
+    .CTA{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+            .call-to-action {
+            background-color: #3882f6;
+            display: flex;
+            width: 75%;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            border-radius: 10px;
+            padding: 3rem 1rem;
+
+                .content {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-around;
+                    align-items: center;
+
+                .text-area {
+                    display: flex;
+                    flex-direction: column;
+                        .title > h3 {
+                            margin: 0;
+                            font-size: 24px;
+                            color: #f9faf8;
+                        }
+                        .statement {
+                            font-size: 18px;
+                            color: #e5e7eb;
+                        }
+                }
+                .cta-signup {
+                    border: solid white 2px;
+                    
+                    margin-left: auto;
+                        a {
+                            font-size: 18px;
+                        color: #e5e7eb;
+                        text-decoration: none;
+                        }
+                    }
+                }
+        }
+
     }
 </style>
